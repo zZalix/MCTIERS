@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>MCTiers</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background-color: #0f0f11;
+      color: #e4e4e7;
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 40px 20px;
+    }
+    .header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .header h1 {
+      font-size: 32px;
+      margin: 0 0 10px 0;
+      color: #ffffff;
+    }
+    .header p {
+      color: #a1a1aa;
+      margin: 0;
+    }
+    .table-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      background-color: #18181b;
+      border: 1px solid #27272a;
+      border-radius: 8px;
+      overflow-x: auto;
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+    }
+    th, td {
+      padding: 16px 20px;
+      border-bottom: 1px solid #27272a;
+    }
+    th {
+      background-color: #1f1f22;
+      color: #a1a1aa;
+      text-transform: uppercase;
+      font-size: 12px;
+      letter-spacing: 1px;
+    }
+    tr:hover {
+      background-color: #27272a;
+    }
+    tr:last-child td {
+      border-bottom: none;
+    }
+    .rank {
+      font-weight: 700;
+      color: #71717a;
+      font-size: 16px;
+    }
+    .player-info {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .avatar {
+      width: 32px;
+      height: 32px;
+      border-radius: 4px;
+      background-color: #3f3f46;
+      image-rendering: pixelated;
+    }
+    .player-name {
+      font-weight: 600;
+      font-size: 16px;
+      color: #ffffff;
+    }
+    .region {
+      font-weight: 600;
+      color: #a1a1aa;
+    }
+    .title-badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: 700;
+      background-color: #27272a;
+    }
+    
+    /* Titoli (Colori personalizzati) */
+    .grandmaster { color: #f472b6; } /* Rosa */
+    .master { color: #f87171; }      /* Rosso */
+    .ace { color: #fbbf24; }         /* Giallo/Oro */
+    .veteran { color: #4ade80; }     /* Verde */
+
+    /* Container dei Tier */
+    .tiers-container {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .tier-badge {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background-color: #1f1f22;
+      border: 1px solid #3f3f46;
+      border-radius: 6px;
+      padding: 4px 8px;
+      min-width: 45px;
+    }
+    .tier-mode {
+      font-size: 10px;
+      color: #a1a1aa;
+      text-transform: uppercase;
+      margin-bottom: 2px;
+    }
+    .tier-value {
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    /* Colori dei Tier originali MCTiers */
+    .t1 { color: #ff5555; text-shadow: 0 0 5px rgba(255,85,85,0.4); } /* Rosso */
+    .t2 { color: #ffaa00; } /* Arancione */
+    .t3 { color: #ffff55; } /* Giallo */
+    .t4 { color: #55ff55; } /* Verde */
+    .t5 { color: #55ffff; } /* Azzurro */
+    .unranked { color: #71717a; } /* Grigio */
+
+  </style>
+</head>
+<body>
+
+<div class="header">
+  <h1>MC TIERS</h1>
+  <p>labubu</p>
+</div>
+
+<div class="table-container">
+  <table>
+    <thead>
+      <tr>
+        <th>Rank</th>
+        <th>Player</th>
+        <th>Titolo</th>
+        <th>Regione</th>
+        <th>Tiers</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+      <!-- GIOCATORE 1 (COPIA QUESTA SEZIONE PER AGGIUNGERE PIÙ AMICI) -->
+      <tr>
+        <td class="rank">#1</td>
+        <td>
+          <div class="player-info">
+            <!-- Cambia "PawZyyy__" con il nome dell'account Minecraft del tuo amico per la sua skin -->
+            <img src="file:///https://s.namemc.com/2d/skin/face.png?id=dc60b0de42fbee4f&scale=4" alt="Skin" class="avatar">
+            <span class="player-name">PawZyyy_</span>
+          </div>
+        </td>
+        <td><span class="title-badge grandmaster">Combat Grandmaster</span></td>
+        <td class="region">EU</td>
+        <td>
+          <div class="tiers-container">
+            <div class="tier-badge"><span class="tier-mode">MACE</span><span class="tier-value t1">HT1</span></div>
+            <div class="tier-badge"><span class="tier-mode">Sword</span><span class="tier-value t1">LT1</span></div>
+            <div class="tier-badge"><span class="tier-mode">SMP</span><span class="tier-value t1">LT1</span></div>
+            <div class="tier-badge"><span class="tier-mode">Axe</span><span class="tier-value t3">HT1</span></div>
+          </div>
+        </td>
+      </tr>
+
+      <!-- GIOCATORE 2 -->
+      <tr>
+        <td class="rank">#2</td>
+        <td>
+          <div class="player-info">
+            <!-- Esempio: skin di Alex -->
+            <img src="https://s.namemc.com/2d/skin/face.png?id=302094680dbb2e48&scale=4" alt="Skin" class="avatar">
+            <span class="player-name">un1verso_</span>
+          </div>
+        </td>
+        <td><span class="title-badge master">Combat Master</span></td>
+        <td class="region">EU</td>
+        <td>
+          <div class="tiers-container">
+            <div class="tier-badge"><span class="tier-mode">MACE</span><span class="tier-value t1">LT1</span></div>
+            <div class="tier-badge"><span class="tier-mode">Sword</span><span class="tier-value t1">HT1</span></div>
+            <div class="tier-badge"><span class="tier-mode">SMP</span><span class="tier-value t1">HT1</span></div>
+            <div class="tier-badge"><span class="tier-mode">AXE</span><span class="tier-value t2">LT2</span></div>
+          </div>
+        </td>
+      </tr>
+
+      <!-- Puoi continuare ad incollare altri giocatori qui sotto -->
+     <!-- GIOCATORE 3 -->
+      <tr>
+        <td class="rank">#3</td>
+        <td>
+          <div class="player-info">
+            <!-- Esempio: skin di Alex -->
+            <img src="https://s.namemc.com/2d/skin/face.png?id=cf51bbd0b39c2017&scale=4" alt="Skin" class="avatar">
+            <span class="player-name">zZalix</span>
+          </div>
+        </td>
+        <td><span class="title-badge master">Combat Master</span></td>
+        <td class="region">EU</td>
+        <td>
+          <div class="tiers-container">
+            <div class="tier-badge"><span class="tier-mode">MACE</span><span class="tier-value t2">HT2</span></div>
+            <div class="tier-badge"><span class="tier-mode">Sword</span><span class="tier-value t1">LT1</span></div>
+            <div class="tier-badge"><span class="tier-mode">SMP</span><span class="tier-value t1">LT1</span></div>
+            <div class="tier-badge"><span class="tier-mode">AXE</span><span class="tier-value t2">HT2</span></div>
+          </div>
+        </td>
+      </tr>
+
+
+     <!-- GIOCATORE 4 -->
+      <tr>
+        <td class="rank">#4</td>
+        <td>
+          <div class="player-info">
+            <!-- Esempio: skin di Alex -->
+            <img src="https://s.namemc.com/2d/skin/face.png?id=9207f18220bcfd0d&scale=4" alt="Skin" class="avatar">
+            <span class="player-name">gabryX2</span>
+          </div>
+        </td>
+        <td><span class="title-badge master">Combat Master</span></td>
+        <td class="region">EU</td>
+        <td>
+          <div class="tiers-container">
+            <div class="tier-badge"><span class="tier-mode">MACE</span><span class="tier-value t3">LT3</span></div>
+            <div class="tier-badge"><span class="tier-mode">Sword</span><span class="tier-value t2">LT2</span></div>
+            <div class="tier-badge"><span class="tier-mode">SMP</span><span class="tier-value t2">LT2</span></div>
+            <div class="tier-badge"><span class="tier-mode">AXE</span><span class="tier-value t2">HT2</span></div>
+          </div>
+        </td>
+      </tr>
+
+     <!-- GIOCATORE 5 -->
+      <tr>
+        <td class="rank">#5</td>
+        <td>
+          <div class="player-info">
+            <!-- Esempio: skin di Alex -->
+            <img src="https://s.namemc.com/2d/skin/face.png?id=f95d09a6a2218d0c&scale=4" alt="Skin" class="avatar">
+            <span class="player-name">Zlem_</span>
+          </div>
+        </td>
+        <td><span class="title-badge master">Combat ace</span></td>
+        <td class="region">EU</td>
+        <td>
+          <div class="tiers-container">
+            <div class="tier-badge"><span class="tier-mode">MACE</span><span class="tier-value t1">LT1</span></div>
+            <div class="tier-badge"><span class="tier-mode">Sword</span><span class="tier-value t3">HT3</span></div>
+            <div class="tier-badge"><span class="tier-mode">SMP</span><span class="tier-value t3">HT3</span></div>
+            <div class="tier-badge"><span class="tier-mode">AXE</span><span class="tier-value t3">HT3</span></div>
+          </div>
+        </td>
+      </tr>
+
+
+     <!-- GIOCATORE 6 -->
+      <tr>
+        <td class="rank">#6</td>
+        <td>
+          <div class="player-info">
+            <!-- Esempio: skin di Alex -->
+            <img src="https://s.namemc.com/2d/skin/face.png?id=9cfe4ac08b318ea9&scale=4" alt="Skin" class="avatar">
+            <span class="player-name">BlimMC_</span>
+          </div>
+        </td>
+        <td><span class="title-badge master">Combat ace</span></td>
+        <td class="region">EU</td>
+        <td>
+          <div class="tiers-container">
+            <div class="tier-badge"><span class="tier-mode">MACE</span><span class="tier-value t2">HT2</span></div>
+            <div class="tier-badge"><span class="tier-mode">Sword</span><span class="tier-value t3">LT3</span></div>
+            <div class="tier-badge"><span class="tier-mode">SMP</span><span class="tier-value t3">HT3</span></div>
+            <div class="tier-badge"><span class="tier-mode">AXE</span><span class="tier-value unranked">N/A</span></div>
+          </div>
+        </td>
+      </tr>
+
+
+      <!-- GIOCATORE 7 -->
+      <tr>
+        <td class="rank">#7</td>
+        <td>
+          <div class="player-info">
+            <!-- Esempio: skin di Alex -->
+            <img src="https://s.namemc.com/2d/skin/face.png?id=21a7ed4404a07af6&scale=4" alt="Skin" class="avatar">
+            <span class="player-name">MainRyen_</span>
+          </div>
+        </td>
+        <td><span class="title-badge master">Combat veteran</span></td>
+        <td class="region">EU</td>
+        <td>
+          <div class="tiers-container">
+            <div class="tier-badge"><span class="tier-mode">MACE</span><span class="tier-value t5">HT6</span></div>
+            <div class="tier-badge"><span class="tier-mode">Sword</span><span class="tier-value t5">LT5</span></div>
+            <div class="tier-badge"><span class="tier-mode">SMP</span><span class="tier-value t5">LT5</span></div>
+            <div class="tier-badge"><span class="tier-mode">AXE</span><span class="tier-value t4">HT5</span></div>
+          </div>
+        </td>
+      </tr>
+
+
+      <!-- GIOCATORE 8 -->
+      <tr>
+        <td class="rank">#8</td>
+        <td>
+          <div class="player-info">
+            <!-- Esempio: skin di Alex -->
+            <img src="https://s.namemc.com/2d/skin/face.png?id=83353c4a70326fd9&scale=4" alt="Skin" class="avatar">
+            <span class="player-name">_ItzZeph_</span>
+          </div>
+        </td>
+        <td><span class="title-badge master">Combat veteran</span></td>
+        <td class="region">EU</td>
+        <td>
+          <div class="tiers-container">
+            <div class="tier-badge"><span class="tier-mode">MACE</span><span class="tier-value t3">lt3</span></div>
+            <div class="tier-badge"><span class="tier-mode">Sword</span><span class="tier-value t4">HT4</span></div>
+            <div class="tier-badge"><span class="tier-mode">SMP</span><span class="tier-value t5">HT5</span></div>
+            <div class="tier-badge"><span class="tier-mode">TRAPS</span><span class="tier-value t1">HT1</span></div>
+          </div>
+        </td>
+      </tr>
+
+
+
+
+<!-- GIOCATORE 9 -->
+      <tr>
+        <td class="rank">#9</td>
+        <td>
+          <div class="player-info">
+            <!-- Esempio: skin di Alex -->
+            <img src="https://s.namemc.com/2d/skin/face.png?id=37618ebe5c90338a&scale=4" alt="Skin" class="avatar">
+            <span class="player-name">Pirata91</span>
+          </div>
+        </td>
+        <td><span class="title-badge master">Combat veteran</span></td>
+        <td class="region">EU</td>
+        <td>
+          <div class="tiers-container">
+            <div class="tier-badge"><span class="tier-mode">MACE</span><span class="tier-value t5">HT6</span></div>
+            <div class="tier-badge"><span class="tier-mode">Sword</span><span class="tier-value t5">HT10</span></div>
+            <div class="tier-badge"><span class="tier-mode">SMP</span><span class="tier-value t5">LT7</span></div>
+            <div class="tier-badge"><span class="tier-mode">AXE</span><span class="tier-value t5">HT67</span></div>
+          </div>
+        </td>
+      </tr>
+
+
+
+
+
+     <!-- GIOCATORE 10 -->
+      <tr>
+        <td class="rank">#10</td>
+        <td>
+          <div class="player-info">
+            <!-- Esempio: skin di Alex -->
+            <img src="https://s.namemc.com/2d/skin/face.png?id=8af89516e62da561&scale=4" alt="Skin" class="avatar">
+            <span class="player-name">klockish</span>
+          </div>
+        </td>
+        <td><span class="title-badge master">Combat veteran</span></td>
+        <td class="region">EU</td>
+        <td>
+          <div class="tiers-container">
+            <div class="tier-badge"><span class="tier-mode">MACE</span><span class="tier-value t5">LT5</span></div>
+            <div class="tier-badge"><span class="tier-mode">Sword</span><span class="tier-value t5">LT5</span></div>
+            <div class="tier-badge"><span class="tier-mode">SMP</span><span class="tier-value t5">LT5</span></div>
+            <div class="tier-badge"><span class="tier-mode">AXE</span><span class="tier-value t5">LT5</span></div>
+          </div>
+        </td>
+      </tr>
+
+
+
+<!-- GIOCATORE 10 -->
+      <tr>
+        <td class="rank">#10</td>
+        <td>
+          <div class="player-info">
+            <!-- Esempio: skin di Alex -->
+            <img src="https://s.namemc.com/2d/skin/face.png?id=2ce07a1a2c16d4f9&scale=4" alt="Skin" class="avatar">
+            <span class="player-name">volevo poter scrollare</span>
+          </div>
+        </td>
+        <td><span class="title-badge master">676Mango767</span></td>
+        <td class="region">EU</td>
+        <td>
+          <div class="tiers-container">
+            <div class="tier-badge"><span class="tier-mode">IO</span><span class="tier-value t5">LT0</span></div>
+            <div class="tier-badge"><span class="tier-mode">IO</span><span class="tier-value t5">LT0</span></div>
+            <div class="tier-badge"><span class="tier-mode">IO</span><span class="tier-value t5">LT0</span></div>
+            <div class="tier-badge"><span class="tier-mode">IO</span><span class="tier-value t5">LT0</span></div>
+          </div>
+        </td>
+      </tr>
+
+
+
+    </tbody>
+  </table>
+</div>
+
+</body>
+</html>
